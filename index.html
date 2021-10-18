@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            $('#d1').dialog({
+                autoOpen: false,
+                position: ['right', 'top']
+            });
+            $('#img1').button().click(function(e){
+                var target = this.id == "img1" ? "#d1" : "#d2";
+                if ($(target).dialog("isOpen")) {
+                    $(target).dialog('close')
+                }else{
+                    $(target).dialog('open')
+                }
+            })
+        })
+    </script>
+        <script>
+            $(function(){
+                $('#d2').dialog({
+                    autoOpen: false,
+                    position: ['right', 'top']
+                });
+                $('#img2').button().click(function(e){
+                    var target = this.id == "img2" ? "#d2" : "#d1";
+                    if ($(target).dialog("isOpen")) {
+                        $(target).dialog('close')
+                    }else{
+                        $(target).dialog('open')
+                    }
+                })
+            })
+        </script>
+        <script>
+            $(function(){
+                $('#d3').dialog({
+                    autoOpen: false,
+                    position: ['right', 'top']
+                });
+                $('#img3').button().click(function(e){
+                    var target = this.id == "img3" ? "#d3" : "#d4";
+                    if ($(target).dialog("isOpen")) {
+                        $(target).dialog('close')
+                    }else{
+                        $(target).dialog('open')
+                    }
+                })
+            })
+        </script>
+        <script>
+            $(function(){
+                $('#d4').dialog({
+                    autoOpen: false,
+                    position: ['right', 'top']
+                });
+                $('#img4').button().click(function(e){
+                    var target = this.id == "img4" ? "#d4" : "#d3";
+                    if ($(target).dialog("isOpen")) {
+                        $(target).dialog('close')
+                    }else{
+                        $(target).dialog('open')
+                    }
+                })
+            })
+        </script>
+</head>
+<body>
+    <img id="img1" width="400", height="300" src="https://itea.ua/wp-content/uploads/2020/10/html-css-1.png" alt="">
+    <img id="img2" width="400", height="300" src="https://itproger.com/img/courses/1476977488.jpg" alt="">
+    <img id="img3" width="400", height="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpa0XJ_4pqjnsPcIlfMyrIqKP8xPJ5YOnsPA&usqp=CAU" alt="">
+    <img id="img4" width="400", height="300" src="https://img.utdstc.com/icon/c6f/36f/c6f36ff0735c528043bc1a3264f6ff828b2ed29f69e25ccdd78b8006133bcc7f:200" alt="">
+    <div id="d1" title="Про HTML">
+        <p>HTML (Hypertext Markup Language) - это код, который используется для структурирования и отображения веб-страницы и её контента.</p>
+    </div>
+    <div id="d2" title="Про CSS">
+        <p>CSS — Cascading Style Sheets — это каскадные таблицы стилей. По сути — язык, который отвечает за описание внешнего вида HTML-документа. </p>
+    </div>
+    <div id="d3" title="Про JS">
+        <p>JavaScript — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript. </p>
+    </div>
+    <div id="d4" title="Про Python">
+        <p>Python  — высокоуровневый язык программирования общего назначения с динамической строгой типизацией и автоматическим управлением памятью. </p>
+    </div>
+</body>
+</html>
